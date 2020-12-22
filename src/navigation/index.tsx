@@ -1,28 +1,13 @@
 import "react-native-gesture-handler";
 import {SafeAreaProvider} from "react-native-safe-area-context";
-import React, {useRef} from "react";
-import {
-  NavigationContainer,
-  NavigationContainerRef,
-} from "@react-navigation/native";
+import React from "react";
+import {NavigationContainer} from "@react-navigation/native";
 import HomeStack from "./home-stack";
 
 const AppNavContainer = () => {
-  const routeName = useRef<string>();
-  const navContainer = useRef<NavigationContainerRef>(null);
-
   return (
     <SafeAreaProvider>
-      <NavigationContainer
-        ref={navContainer}
-        onReady={() =>
-          (routeName.current = navContainer.current?.getCurrentRoute?.()?.name)
-        }
-        onStateChange={() => {
-          const currentRouteName = navContainer.current?.getCurrentRoute?.()
-            ?.name;
-          routeName.current = currentRouteName;
-        }}>
+      <NavigationContainer>
         <HomeStack />
       </NavigationContainer>
     </SafeAreaProvider>
