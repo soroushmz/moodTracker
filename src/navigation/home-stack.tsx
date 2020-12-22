@@ -9,8 +9,16 @@ const Stack = createStackNavigator();
 const HomeStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} options={{title: "Home"}} />
-      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{header: () => null}}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{header: () => null}}
+      />
     </Stack.Navigator>
   );
 };
