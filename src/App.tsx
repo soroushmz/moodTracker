@@ -10,8 +10,6 @@ import {
 
 import {Colors} from "react-native/Libraries/NewAppScreen";
 
-declare const global: {HermesInternal: null | {}};
-
 const App = () => {
   return (
     <>
