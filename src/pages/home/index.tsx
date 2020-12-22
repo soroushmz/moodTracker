@@ -1,16 +1,16 @@
 import React from "react";
-import {View, Text, Button} from "react-native";
+import {View, Text, Button, SafeAreaView} from "react-native";
 
 const Home = ({navigation}: {navigation: any}) => {
   return (
-    <View>
+    <SafeAreaView>
       <View>
         <Text>Home Page</Text>
       </View>
       <Button onPress={() => navigation.navigate("Profile")} title="Button">
         <Text>Profile</Text>
       </Button>
-    </View>
+    </SafeAreaView>
   );
 };
 
