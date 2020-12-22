@@ -7,7 +7,7 @@ import {
 } from "@react-navigation/native";
 import HomeStack from "./home-stack";
 
-const AppContainer = () => {
+const AppNavContainer = () => {
   const routeName = useRef<string>();
   const navContainer = useRef<NavigationContainerRef>(null);
 
@@ -29,4 +29,4 @@ const AppContainer = () => {
   );
 };
 
-export default AppContainer;
+export default AppNavContainer;
